@@ -1,0 +1,39 @@
+
+body {
+    font-family: sans-serif;
+}
+
+#container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#login, #register, #messages {
+    display: none;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+}
+
+#search {
+    margin-bottom: 10px;
+}
+
+#message-list {
+    list-style: none;
+    padding: 0;
+}
+
+.message-card {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.message-card p {
+    margin-bottom: 5px;
+}

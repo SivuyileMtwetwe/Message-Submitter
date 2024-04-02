@@ -1,0 +1,239 @@
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url(./Images/papers.co-vv33-mosaic-dots-pattern-background-white-purple-8-wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 972px;
+    color: white;
+    border-radius: 20px;
+  }
+
+  #username{
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgb(88, 50, 88);
+    margin-bottom: 10px;
+    margin-left: 75px;
+  }
+
+  #username:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00
+  }
+
+  #password{
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 75px;
+    border: 2px solid rgb(88, 50, 88);
+  }
+
+  #password:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00
+  }
+
+  #register{
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #register:hover{
+    color: white;
+    background-color: blueviolet;
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+  }
+
+  #login-username{
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgb(88, 50, 88);
+    margin-bottom: 10px;
+    margin-left: 75px;
+  }
+
+  #login-username:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+  }
+
+  #login-password{
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 75px;
+    border: 2px solid rgb(88, 50, 88);
+  }
+
+  #login-password:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+  }
+  
+  #login{
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #login:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+    background-color: blueviolet;
+  }
+
+  #search{
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgb(88, 50, 88);
+    margin-bottom: 10px;
+    margin-left: 75px;
+  }
+
+  #search:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+    
+  }
+
+  #searchBtn:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+    background-color: blueviolet;
+  }
+
+  #searchBtn{
+    background-color: purple;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #message-input{
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgb(88, 50, 88);
+    margin-bottom: 10px;
+    margin-left: 75px;
+  }
+
+  #message-input:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+  }
+
+  #submit{
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #submit:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+    background-color: blueviolet;
+  }
+
+  #logout{
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    color: white;
+    margin-top: -32px;
+  }
+
+  #logout:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+    background-color: blueviolet;
+  }
+
+  
+  .page {
+    border: 1px solid;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    margin: 15px;
+    background-color: rgb(189, 100, 189,10);
+    border-radius: 20px;
+  } 
+  
+  #message-page {
+    display: block;
+  }
+  
+  .message-card {
+    border: 1px solid;
+    color: white;
+    background-color: purple;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px 60px;
+  }
+
+  .message-card:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+  }
+  
+  .message-card button {
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 210px;
+    margin-top: 10px;
+    color: white;
+  }
+
+  .message-card button:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+    background-color: blueviolet;
+  }
+
+  .scroll{
+    width: 300px;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  

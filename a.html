@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./b.css">
+</head>
+<body>
+    <div id="register-page" class="page">
+        <h2>Register</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button  id="register" onclick="register()">Register</button>
+        Already have an account? <a href="#"  onclick="showPage('login-page')" ><Login>Login here.</a>
+      </div>
+    
+      <div id="login-page" class="page">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login" onclick="login()">Login</button>
+        Don't have an account? <a href="#" onclick="showPage('register-page')" >Register here.</a>
+      </div>
+    
+      <div id="message-page" class="page">
+        <h2>Welcome <span id="current-user"></span></h2>
+        
+        <input type="text" id="search" placeholder="Search...">
+        <button id="searchBtn" onclick="search()">Search</button><br><br>
+        <textarea id="message-input" placeholder="Type your message..."></textarea>
+        
+       
+        <button id="submit" onclick="submitMessage()">Submit</button>
+        <button id="logout" onclick="logout()">Logout</button>
+        <div class="scroll"><div id="messages"></div></div>
+      
+    </div>
+    <script src="./c.js"></script>
+</body>
+</html>
