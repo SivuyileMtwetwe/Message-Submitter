@@ -70,7 +70,7 @@ function displayMessages() {
     messageCard.classList.add("message-card");
     messageCard.innerHTML = `
       <p><strong>${message.user}</strong> (${message.timestamp}): ${message.message}</p>
-      <button onclick="deleteMessage('${message.timestamp}')">Delete</button>
+      <button onclick="deleteMessage('${message.timestamp}')"><i class="fa-solid fa-trash"></i></button>
     `;
     messagesContainer.appendChild(messageCard);
   });
@@ -193,7 +193,7 @@ function displayMessages() {
     messageCard.classList.add("message-card");
     messageCard.innerHTML = `
       <p><strong>${message.user}</strong> (${message.timestamp}): ${message.message}</p>
-      <button onclick="deleteMessage('${message.timestamp}')">Delete</button>
+      <button onclick="deleteMessage('${message.timestamp}')"><i class="fa-solid fa-trash"></i></button>
     `;
     messagesContainer.appendChild(messageCard);
   });
