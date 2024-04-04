@@ -269,7 +269,6 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
 
-
 // // Store the current page in session storage
 // window.addEventListener("beforeunload",function(){
 //   const currentPageId=this.document.querySelector(".page[style='display: block']").id;
