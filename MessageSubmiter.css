@@ -11,21 +11,21 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment:fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
+    min-height: 90dvh;
     color: white;
     border-radius: 20px;
+    
   }
  
-
   p{
     margin-bottom: 30px;
   }
 
-  #username{
+  #username,#password,#login-username,#login-password{
     border-radius: 20px;
     padding: 10px;
     border: 2px solid rgb(88, 50, 88);
@@ -33,24 +33,12 @@ body {
     margin-left: 75px;
   }
 
-  #username:hover{
+  input:hover{
     box-shadow: 6px 6px 10px #0e0303,
     -6px -6px 10px #fcfbfb00
   }
 
-  #password{
-    border-radius: 20px;
-    padding: 10px;
-    margin-left: 75px;
-    border: 2px solid rgb(88, 50, 88);
-  }
-
-  #password:hover{
-    box-shadow: 6px 6px 10px #0e0303,
-    -6px -6px 10px #fcfbfb00
-  }
-
-  #register{
+  #register,#login{
     background-color: purple;
     border-radius: 10px;
     display: flex;
@@ -62,54 +50,11 @@ body {
     margin-bottom: 10px;
   }
 
-  #register:hover{
+  button:hover{
     color: white;
     background-color: blueviolet;
     box-shadow: 6px 6px 10px #0e0303,
     -6px -6px 10px #fcfbfb00;
-  }
-
-  #login-username{
-    border-radius: 20px;
-    padding: 10px;
-    border: 2px solid rgb(88, 50, 88);
-    margin-bottom: 10px;
-    margin-left: 75px;
-  }
-
-  #login-username:hover{
-    box-shadow: 6px 6px 10px #0e0303,
-    -6px -6px 10px #fcfbfb00;
-  }
-
-  #login-password{
-    border-radius: 20px;
-    padding: 10px;
-    margin-left: 75px;
-    border: 2px solid rgb(88, 50, 88);
-  }
-
-  #login-password:hover{
-    box-shadow: 6px 6px 10px #0e0303,
-    -6px -6px 10px #fcfbfb00;
-  }
-  
-  #login{
-    background-color: purple;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 150px;
-    margin-top: 10px;
-    color: white;
-    margin-bottom: 10px;
-  }
-
-  #login:hover{
-    box-shadow: 6px 6px 10px #0e0303,
-    -6px -6px 10px #fcfbfb00;
-    background-color: blueviolet;
   }
 
   #search{
@@ -118,19 +63,7 @@ body {
     border: 2px solid rgb(88, 50, 88);
     margin-bottom: 10px;
     margin-left: 75px;
-  }
-
-  #search:hover{
-    box-shadow: 6px 6px 10px #0e0303,
-    -6px -6px 10px #fcfbfb00;
-    
-  }
-
-  #searchBtn:hover{
-    box-shadow: 6px 6px 10px #0e0303,
-    -6px -6px 10px #fcfbfb00;
-    background-color: blueviolet;
-  }
+  } 
 
   #searchBtn{
     background-color: purple;
@@ -163,12 +96,6 @@ body {
     margin-bottom: 10px;
   }
 
-  #submit:hover{
-    box-shadow: 6px 6px 10px #0e0303,
-    -6px -6px 10px #fcfbfb00;
-    background-color: blueviolet;
-  }
-
   #logout{
     background-color: purple;
     border-radius: 10px;
@@ -180,13 +107,6 @@ body {
     margin-top: -32px;
   }
 
-  #logout:hover{
-    box-shadow: 6px 6px 10px #0e0303,
-    -6px -6px 10px #fcfbfb00;
-    background-color: blueviolet;
-  }
-
-  
   .page {
     border: 1px solid;
     display: flex;
@@ -245,4 +165,72 @@ body {
     margin-top: 10px;
     margin-bottom: 20px;
   }
+  
+ 
+  .page{
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  .page{
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  h2,h3{
+    -webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+  
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+  
   

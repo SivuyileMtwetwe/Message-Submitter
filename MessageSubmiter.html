@@ -3,50 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./MessageSubmiter..css">
+    <title>Message Submiter</title>
+    <link rel="stylesheet" type="text/css" href="./MessageSubmiter.css">
     <script src="https://kit.fontawesome.com/586ca0249d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="register-page" class="page">
+  
+     <div id="register-page" class="page">
         <h2>Register</h2>
-        <i id="i" class="fa-solid fa-user"></i>
-        <input type="text" id="username" placeholder="Username " ><br>
-        <i id="i" class="fa-solid fa-unlock"></i>
-        <input type="password" id="password" placeholder="Password">
+        
+        <input type="text" id="username" placeholder="👤Username " required><br>
+        
+        <input type="password" id="password" placeholder="🔑Password" required>
         <button  id="register" onclick="register()">Register</button>
        <p> Already have an account? <a href="#"  onclick="showPage('login-page')" ><Login>Login here.</a></p>
       </div>
     
       <div id="login-page" class="page">
         <h2>Login</h2>
-        <div class="input-wrap"> 
-          <i id="i" class="fa-solid fa-user"></i>
-          <input type="text" id="login-username" placeholder="Username" class="input-part">
-        </div>
+         
+          <input type="text" id="login-username" placeholder="👤Username" required>
        <br>
-       <div class="input-wrap">
-
-         <i id="i"  class="fa-solid fa-unlock"></i>
-         <input type="password" id="login-password" placeholder="Password" class="input-part">
-        </div>
+         
+         <input type="password" id="login-password" placeholder="🔑Password" required>
          <button id="login" onclick="login()">Login</button>
          <p>Don't have an account? <a href="#" onclick="showPage('register-page')" >Register here.</a></p>
       </div>
     
       <div id="message-page" class="page">
         <h2>Welcome <span id="current-user"></span></h2>
-        
         <input type="text" id="search" placeholder="Search...">
-        <button id="searchBtn" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button><br><br>
-        <textarea id="message-input" placeholder="Type your message..."></textarea>
-        
-       
+        <button id="searchBtn" onclick="search()">🔍</i></button><br><br>
+        <textarea id="message-input" placeholder="Type your message..." required></textarea>
         <button id="submit" onclick="submitMessage()">Submit</button>
         <button id="logout" onclick="logout()">Logout</button>
         <div class="scroll"><div id="messages"></div></div>
-      
-    </div>
-    <script src="./MessageSubmiter..js"></script>
+      </div>
+    <script src="./MessageSubmiter.js"></script>
 </body>
 </html>
