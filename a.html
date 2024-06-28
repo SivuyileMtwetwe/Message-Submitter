@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Submiter</title>
+    <link rel="stylesheet" type="text/css" href="./MessageSubmiter.css">
+    <script src="https://kit.fontawesome.com/586ca0249d.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2,h3{
+  text-align: center;
+}
+
+body {
+    background-image: url(./Images/purple-and-white-background-2560-x-1440-wb2o9lev4g3oru3c.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90dvh;
+    color: white;
+    border-radius: 20px;
+    
+  }
+ 
+  p{
+    margin-bottom: 30px;
+  }
+
+  #username,#password,#login-username,#login-password{
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgb(88, 50, 88);
+    margin-bottom: 10px;
+    margin-left: 75px;
+  }
+
+  input:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00
+  }
+
+  #register,#login{
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  button:hover{
+    color: white;
+    background-color: blueviolet;
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+  }
+
+  #search{
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgb(88, 50, 88);
+    margin-bottom: 10px;
+    margin-left: 75px;
+  } 
+
+  #searchBtn{
+    background-color: purple;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #message-input{
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgb(88, 50, 88);
+    margin-bottom: 10px;
+    margin-left: 75px;
+  }
+
+  #message-input:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+  }
+
+  #submit{
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  #logout{
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    color: white;
+    margin-top: -32px;
+  }
+
+  .page {
+    border: 1px solid;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    margin: 15px;
+    background-color: rgb(189, 100, 189,10);
+    border-radius: 20px;
+  } 
+  
+  #message-page {
+    display: block;
+  }
+  
+  .message-card {
+    border: 1px solid;
+    color: white;
+    background-color: purple;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px 60px;
+  }
+
+  .message-card:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+  }
+  
+  .message-card button {
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 210px;
+    margin-top: 10px;
+    color: white;
+  }
+
+  .message-card button:hover{
+    box-shadow: 6px 6px 10px #0e0303,
+    -6px -6px 10px #fcfbfb00;
+    background-color: blueviolet;
+  }
+
+  .scroll{
+    width: 300px;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+ 
+  .page{
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  .page{
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  h2,h3{
+    -webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+  
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+  
+  
+</style>
+<body>
+  
+     <div id="register-page" class="page">
+        <h2>Register</h2>
+        
+        <input type="text" id="username" placeholder="👤Username " required><br>
+        
+        <input type="password" id="password" placeholder="🔑Password" required>
+        <button  id="register" onclick="register()">Register</button>
+       <p> Already have an account? <a href="#"  onclick="showPage('login-page')" ><Login>Login here.</a></p>
+      </div>
+    
+      <div id="login-page" class="page">
+        <h2>Login</h2>
+         
+          <input type="text" id="login-username" placeholder="👤Username" required>
+       <br>
+         
+         <input type="password" id="login-password" placeholder="🔑Password" required>
+         <button id="login" onclick="login()">Login</button>
+         <p>Don't have an account? <a href="#" onclick="showPage('register-page')" >Register here.</a></p>
+      </div>
+    
+      <div id="message-page" class="page">
+        <h2>Welcome <span id="current-user"></span></h2>
+        <input type="text" id="search" placeholder="Search...">
+        <button id="searchBtn" onclick="search()">🔍</i></button><br><br>
+        <textarea id="message-input" placeholder="Type your message..." required></textarea>
+        <button id="submit" onclick="submitMessage()">Submit</button>
+        <button id="logout" onclick="logout()">Logout</button>
+        <div class="scroll"><div id="messages"></div></div>
+      </div>
+    <script src="./MessageSubmiter.js">
+let currentUser = null;
+document.addEventListener("DOMContentLoaded",function(){
+  currentUser=localStorage.getItem("currentUser");
+  if(currentUser){
+    document.getElementById("current-user").textContent=currentUser;
+    showPage("message-page");
+    displayMessages()
+  }else{
+    showPage("register-page")
+  };
+});
+
+function register() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  localStorage.setItem(username, password);
+  showPage("login-page");
+}
+
+function login() {
+  const username = document.getElementById("login-username").value;
+  const password = document.getElementById("login-password").value;
+
+  if (localStorage.getItem(username) === password) {
+    currentUser = username;
+    document.getElementById("current-user").textContent = currentUser;
+    showPage("message-page");
+    displayMessages();
+  } else {
+    alert("Invalid username or password");
+  }
+}
+
+function logout() {
+  currentUser = null;
+  showPage("login-page");
+}
+
+function submitMessage() {
+  const message = document.getElementById("message-input").value;
+  const timestamp = new Date().toLocaleString();
+  const messageObj = {
+    user: currentUser,
+    message: message,
+    timestamp: timestamp
+  };
+
+  let messages = JSON.parse(localStorage.getItem("messages")) || [];
+  messages.unshift(messageObj);
+  localStorage.setItem("messages", JSON.stringify(messages));
+  displayMessages();
+}
+
+function displayMessages() {
+  const messagesContainer = document.getElementById("messages");
+  messagesContainer.innerHTML = "";
+  const messages = JSON.parse(localStorage.getItem("messages")) || [];
+  messages.forEach(message => {
+    const messageCard = document.createElement("div");
+    messageCard.classList.add("message-card");
+    messageCard.innerHTML = `
+      <p><strong>${message.user}</strong> (${message.timestamp}): ${message.message}</p>
+      <button onclick="deleteMessage('${message.timestamp}')">🗑️</i></button>
+    `;
+    messagesContainer.appendChild(messageCard);
+  });
+}
+
+function deleteMessage(timestamp) {
+  let messages = JSON.parse(localStorage.getItem("messages")) || [];
+  messages = messages.filter(message => message.timestamp !== timestamp);
+
+  localStorage.setItem("messages", JSON.stringify(messages));
+  displayMessages();
+}
+
+function search() {
+  const query = document.getElementById("search").value.toLowerCase();
+  const messages = JSON.parse(localStorage.getItem("messages")) || [];
+  const filteredMessages = messages.filter(message => message.message.toLowerCase().includes(query));
+  const messagesContainer = document.getElementById("messages");
+  messagesContainer.innerHTML = "";
+
+  filteredMessages.forEach(message => {
+    const messageCard = document.createElement("div");
+    messageCard.classList.add("message-card");
+    messageCard.innerHTML = `
+      <p><strong>${message.user}</strong> (${message.timestamp}): ${message.message}</p>
+      <button onclick="deleteMessage('${message.timestamp}')">🗑️</button>
+    `;
+    messagesContainer.appendChild(messageCard);
+  });
+}
+
+function showPage(pageId) {
+  const pages = document.getElementsByClassName("page");
+  for (let i = 0; i < pages.length; i++) {
+    pages[i].style.display = "none";
+  }
+  document.getElementById(pageId).style.display = "block";
+  localStorage.setItem("currentPage",pageId);
+}
+
+function storeCurrentPage(pageId){
+  localStorage.setItem('currentPage',pageId);
+}
+
+function showStoredPage(){
+  const currentPageId=localStorage.getItem('currentPage');
+  if(currentPageId){
+    showPage(currentPageId);
+  }else{
+    showPage("register-page");
+  }
+}
+
+
+
+
+    </script>
+</body>
+</html>
